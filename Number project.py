@@ -19,21 +19,23 @@ while True:
 import random
 mini=1
 maxa=100
-rand=random.randiant(mini,maxa)
-y=input("guess a number from 1-100")
-
+rand=random.randint(mini,maxa)
+y=input("guess a number from 1-100, Exit to leave")
+history=[]
 while True:
+    guess=int(y)
     if y=="exit":
         break
-    elif y>rand:
-        print (f"You Guessed" guess_history)
-        guess_history=y+guess_history
+    elif guess>(rand):
+        print (f"You Guessed" + str(history))
+        history.append(guess)
         print("lower")
-    elif y<rand:
-        print (f"You guessed"guess_history)
-        guess_history=y+guess_history
+    elif guess<rand:
+        print (f"You guessed"+ str(history))
+        history.append(guess)
         print("higher")
-    elif y==rand:
+    elif guess==rand:
         print("correct")
+        break
 
     
