@@ -25,21 +25,21 @@ rand=random.randint(mini,maxa)
 history=[]
 while True:
     y=input("guess a number from 1-100, Exit to leave")
-    inty=int(y)
+    history.append(y)
     if y=="exit":
         break
-    elif inty> rand:
+    elif int(y)> rand:
         print (f"You Guessed" + str(history))
-        history.append(inty)
-        guess==inty
+        guess+=guess
+        print(f"number of guesses"+str(guess))
         print("lower")
-    elif inty<rand:
+    elif int(y)<rand:
         print (f"You guessed"+ str(history))
-        history.append(inty)
-        guess==inty
+        print(f"number of guesses"+(guess))
+        guess+=guess
         print("higher")
-    elif guess==rand:
-        print("correct")
+    elif int(y)==rand:
+        print(f"correct it is"+ {rand})
         break
 
     
