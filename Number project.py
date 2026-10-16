@@ -26,8 +26,8 @@ history=[]
 while True:
     y=input("guess a number from 1-100, Exit to leave")
     history.append(y)
-    guess=+1
-    if y=="exit":
+    guess=guess+1
+    if y =="exit":
         break
     elif int(y)> rand:
         print (f"You Guessed" + str(history))
@@ -35,8 +35,8 @@ while True:
         print("lower")
     elif int(y)<rand:
         print (f"You guessed"+ str(history))
-        print(f"number of guesses "+(guess))
+        print(f"number of guesses "+ str(guess))
         print("higher")
     elif int(y)==rand:
-        print(f"correct it is"+ {rand})
-    break;
+        print(f"correct! it is", (rand))
+        break;
